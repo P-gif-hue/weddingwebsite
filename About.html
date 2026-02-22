@@ -15,30 +15,54 @@
 
 <body>
 
-  <!-- Navigation (kept identical across pages) -->
-  <nav>
-    <div class="nav-links">
-      <ul>
-        <li><a href="index.html">Welcome</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="DressCode.html">Dress Code</a></li>
-        <li><a href="Travel.html">Travel & Accommodation</a></li>
-        <li><a href="Thingstodo.html">Things to do</a></li>
-        <li><a href="FAQs.html">FAQs</a></li>
-      </ul>
+ <!-- Navigation -->
+
+<nav>
+    <div class="nav-inner">
+  
+  ```
+  <!-- Hamburger (shows on mobile) -->
+  <button class="nav-toggle" aria-label="Open Menu">
+    ☰
+  </button>
+  
+  <!-- Links -->
+  <div class="nav-links">
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="DressCode.html">Dress Code</a></li>
+      <li><a href="Travel.html">Travel & Accommodation</a></li>
+      <li><a href="Thingstodo.html">Things to do</a></li>
+      <li><a href="FAQs.html">FAQs</a></li>
+    </ul>
+  </div>
+  ```
+  
     </div>
   </nav>
-
+  
   <section class="page-section">
 
     <div class="events-intro">
       <h2>Order of Events</h2>
       <div class="divider"></div>
       <p>
-        Here's everything we have planned over the four days.
-        Upon arrival you will be given full details on timings and locations within the resort.
+        Here’s an overview of the celebrations across the four days. We are carefully planning the timings so you can enjoy as much of the resort as possible, with full details of locations and schedules shared when you arrive.
       </p>
     </div>
+
+    <div class="events-guidance">
+        <p>
+          We want everyone to relax and truly enjoy the celebrations with us, so we only ask for a few small considerations:
+        </p>
+        <ul>
+          <li>The resort is quite large, so please allow time to arrive promptly for each event.</li>
+          <li>During the ceremonies, we kindly ask that guests remain seated and observe silence and respect.</li>
+          <li>We ask that children are supervised and not running around during these moments.</li>
+        </ul>
+      </div>
+      
 
     <div class="events-grid">
 
@@ -74,7 +98,7 @@
         <img src="Pictures/photos/civil.jpg" alt="Civil ceremony">
         <h3>Civil Ceremony</h3>
         <p><strong>Wednesday 17th February</strong></p>
-        <p>A short and sweet civil ceremony followed by dinner, speeches, and celebrations.</p>
+        <p>A short and sweet civil ceremony.</p>
       </div>
 
       <div class="event-card">
@@ -89,4 +113,13 @@
   </section>
 
 </body>
+<script>
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+  
+    toggle.addEventListener("click", function () {
+      links.classList.toggle("open");
+    });
+  </script>
+  
 </html>

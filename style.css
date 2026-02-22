@@ -229,6 +229,7 @@ nav {
     align-items: stretch; /* makes all cards equal height */
   }
   
+
   .event-card {
     background: white;
     border-radius: 18px;
@@ -279,6 +280,53 @@ nav {
   .event-card p:last-child {
     margin-top: auto;
   }
+/* =========================
+   INTRO SPACING FIX
+========================= */
+
+.events-intro {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.events-intro p {
+  margin-top: 12px;
+}
+
+
+/* =========================
+   GUIDANCE BOX
+========================= */
+
+.events-guidance {
+  max-width: 680px;
+  margin: 40px auto 60px;
+  padding: 26px 30px;
+
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.04);
+
+  text-align: left;
+
+  /* This softens it visually */
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #6f6761;
+}
+
+.events-guidance p {
+  margin-bottom: 14px;
+}
+
+.events-guidance ul {
+  padding-left: 18px;
+}
+
+.events-guidance li {
+  margin-bottom: 8px;
+}
 
 /* =====================================================
 5. DRESS CODE PAGE
@@ -435,26 +483,6 @@ nav {
   }
   
   
-  /* =========================
-     MOBILE ONLY (Stack when needed)
-  ========================= */
-  
-  @media (max-width: 900px) {
-  
-    .dress-header {
-      display: none;
-    }
-  
-    .dress-row {
-      grid-template-columns: 1fr;
-      gap: 6px;
-      padding: 22px;
-    }
-  
-    .dress-event {
-      font-size: 20px;
-    }
-  }
 /* =====================================================
 6. TRAVEL PAGE
 ===============================================/* ============================================================ */
@@ -582,6 +610,47 @@ nav {
   }
   
   
+  /* Add labels manually using pseudo-elements */
+  .flight-row div:nth-child(1)::before {
+    content: "Departure";
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #9a9088;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .flight-row div:nth-child(2)::before {
+    content: "Airline";
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #9a9088;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .flight-row div:nth-child(3)::before {
+    content: "Days";
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #9a9088;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  /* Add spacing between cards */
+  .flight-row {
+    border-bottom: none;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+
+  
   /* =========================
      GUEST DETAILS FORM
   ========================= */
@@ -624,23 +693,7 @@ nav {
   }
   
   
-  /* =========================
-     MOBILE RESPONSIVE
-  ========================= */
   
-  @media (max-width: 800px) {
-  
-    .travel-grid {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-  
-    .flight-row {
-      grid-template-columns: 1fr;
-      gap: 6px;
-    }
-  }
-
 /* =====================================================
    THINGS TO DO PAGE
 ===================================================== */
@@ -713,25 +766,6 @@ nav {
   }
   
   
-  /* =========================
-     RESPONSIVE
-  ========================= */
-  
-  @media (max-width: 1000px) {
-    .things-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .things-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .things-section {
-      margin: 60px auto;
-    }
-  }
 /* =====================================================
 8. FAQ PAGE
 ===================================================== */
@@ -866,137 +900,173 @@ nav {
   }
   
   
-  /* =========================
-     MOBILE
-  ========================= */
-  
-  @media (max-width: 640px) {
-    .faq-section {
-      margin-top: 60px;
-    }
-  
-    .faq-section h1 {
-      font-size: 32px;
-    }
-  }
 
 /* =====================================================
-9. MOBILE RESPONSIVE
+9. MOBILE RESPONSIVE — MASTER (ONLY ONE)
 ===================================================== */
+
 @media (max-width: 768px) {
 
-    /* ---------- GLOBAL SPACING ---------- */
-  
-    section,
-    .page-section,
-    .things-section,
-    .faq-section,
-    .guest-details {
-      margin: 50px auto;
-      padding: 0 18px;
-    }
-  
-    /* ---------- TYPOGRAPHY SCALING ---------- */
-  
-    h1 {
-      font-size: clamp(32px, 8vw, 44px);
-      line-height: 1.2;
-    }
-  
-    h2 {
-      font-size: clamp(24px, 6vw, 32px);
-    }
-  
-    h3 {
-      font-size: 20px;
-    }
-  
-    p {
-      font-size: 15.5px;
-    }
-  
-    /* ---------- NAV FIX ---------- */
-  
-    nav {
-      padding: 18px 10px;
-    }
-  
-    .nav-links ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-  
-    .nav-links li {
-      margin: 0;
-    }
-  
-    .nav-links a {
-      font-size: 14px;
-    }
-  
-    /* ---------- HERO SECTIONS ---------- */
-  
-    .travel-hero {
-      padding: 70px 16px 60px;
-    }
-  
-    .page-home .welcome-hero {
-      height: auto;
-      padding: 70px 20px;
-    }
-  
-    /* ---------- CARD PADDING REDUCTION ---------- */
-  
-    .message-card,
-    .travel-card,
-    .thing-card,
-    .rsvp-section {
-      padding: 24px;
-      border-radius: 18px;
-    }
-  
-    /* ---------- GRID STACKING ---------- */
-  
-    .events-grid,
-    .travel-grid,
-    .things-grid {
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-  
-    /* ---------- TABLE STACKING ---------- */
-  
-    .dress-header {
-      display: none;
-    }
-  
-    .dress-row {
-      grid-template-columns: 1fr;
-      padding: 18px;
-      gap: 6px;
-    }
-  
-    .flight-row {
-      grid-template-columns: 1fr;
-      gap: 4px;
-    }
-  
-    /* ---------- FORMS ---------- */
-  
-    .details-form input,
-    .details-form textarea,
-    .faq-form input,
-    .faq-form textarea {
-      font-size: 16px; /* prevents iOS zoom */
-    }
-  
-    /* ---------- BUTTONS ---------- */
-  
-    .btn-primary {
-      width: 100%;
-      padding: 16px;
-      font-size: 15px;
-    }
+  /* ---------- GLOBAL SPACING ---------- */
+
+  section,
+  .page-section,
+  .things-section,
+  .faq-section,
+  .guest-details {
+    margin: 50px auto;
+    padding: 0 18px;
   }
+
+  /* ---------- TYPOGRAPHY ---------- */
+
+  h1 {
+    font-size: clamp(32px, 8vw, 44px);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15.5px;
+  }
+
+  /* ---------- NAV → MOBILE DROPDOWN ---------- */
+
+  nav {
+    padding: 16px 0;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-top: 12px;
+  }
+
+  .nav-links li {
+    display: block;
+    margin: 0;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .nav-links.open {
+    max-height: 400px;
+  }
+
+  /* ---------- STACK ALL GRIDS ---------- */
+
+  .events-grid,
+  .travel-grid,
+  .things-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* ---------- EVENTS GUIDANCE BOX ---------- */
+
+  .events-guidance {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  /* ---------- FLIGHTS → MOBILE CARDS ---------- */
+
+  .flight-row {
+    grid-template-columns: 1fr;
+    padding: 16px 18px;
+    gap: 4px;
+    border-bottom: none;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+
+  .flight-row.header {
+    display: none;
+  }
+
+  .flight-row div:nth-child(1)::before {
+    content: "Departure";
+    font-size: 12px;
+    color: #9a9088;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .flight-row div:nth-child(2)::before {
+    content: "Airline";
+    font-size: 12px;
+    color: #9a9088;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .flight-row div:nth-child(3)::before {
+    content: "Days";
+    font-size: 12px;
+    color: #9a9088;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* ---------- DRESS TABLE STACK ---------- */
+
+  .dress-header {
+    display: none;
+  }
+
+  .dress-row {
+    grid-template-columns: 1fr;
+    padding: 18px;
+    gap: 6px;
+  }
+
+  /* ---------- FORMS ---------- */
+
+  .details-form input,
+  .details-form textarea,
+  .faq-form input,
+  .faq-form textarea {
+    font-size: 16px;
+  }
+
+  /* ---------- BUTTON ---------- */
+
+  .btn-primary {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+
+/* Hide hamburger on desktop */
+.nav-toggle {
+  display: none;
+}

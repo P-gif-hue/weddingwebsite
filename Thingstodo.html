@@ -15,20 +15,33 @@
 
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-links">
-      <ul>
-        <li><a href="index.html">Welcome</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="DressCode.html">Dress Code</a></li>
-        <li><a href="Travel.html">Travel & Accommodation</a></li>
-        <li><a href="Thingstodo.html">Things to do</a></li>
-        <li><a href="FAQs.html">FAQs</a></li>
-      </ul>
+<!-- Navigation -->
+
+<nav>
+    <div class="nav-inner">
+  
+  ```
+  <!-- Hamburger (shows on mobile) -->
+  <button class="nav-toggle" aria-label="Open Menu">
+    ☰
+  </button>
+  
+  <!-- Links -->
+  <div class="nav-links">
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="DressCode.html">Dress Code</a></li>
+      <li><a href="Travel.html">Travel & Accommodation</a></li>
+      <li><a href="Thingstodo.html">Things to do</a></li>
+      <li><a href="FAQs.html">FAQs</a></li>
+    </ul>
+  </div>
+  ```
+  
     </div>
   </nav>
-
+  
 
   <!-- Resort Activities -->
   <section class="things-section">
@@ -104,6 +117,14 @@
       </div>
     </div>
   </section>
-
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+  
+    toggle.addEventListener("click", function () {
+      links.classList.toggle("open");
+    });
+  </script>
+  
 </body>
 </html>

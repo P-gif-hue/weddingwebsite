@@ -15,8 +15,18 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- Navigation -->
+
 <nav>
+    <div class="nav-inner">
+  
+  ```
+  <!-- Hamburger (shows on mobile) -->
+  <button class="nav-toggle" aria-label="Open Menu">
+    ☰
+  </button>
+  
+  <!-- Links -->
   <div class="nav-links">
     <ul>
       <li><a href="index.html">Welcome</a></li>
@@ -27,7 +37,11 @@
       <li><a href="FAQs.html">FAQs</a></li>
     </ul>
   </div>
-</nav>
+  ```
+  
+    </div>
+  </nav>
+  
 
 
 <!-- HERO -->
@@ -178,6 +192,14 @@
   </form>
 
 </section>
-
+<script>
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+  
+    toggle.addEventListener("click", function () {
+      links.classList.toggle("open");
+    });
+  </script>
+  
 </body>
 </html>

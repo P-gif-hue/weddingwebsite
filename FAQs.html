@@ -15,8 +15,18 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- Navigation -->
+
 <nav>
+    <div class="nav-inner">
+  
+  ```
+  <!-- Hamburger (shows on mobile) -->
+  <button class="nav-toggle" aria-label="Open Menu">
+    ☰
+  </button>
+  
+  <!-- Links -->
   <div class="nav-links">
     <ul>
       <li><a href="index.html">Welcome</a></li>
@@ -27,8 +37,11 @@
       <li><a href="FAQs.html">FAQs</a></li>
     </ul>
   </div>
-</nav>
-
+  ```
+  
+    </div>
+  </nav>
+  
 
 <!-- FAQ SECTION -->
 <section class="faq-section">
@@ -37,16 +50,11 @@
 
   <div class="faq-item">
     <button class="faq-question">How long should I book my stay for?</button>
-    <div class="faq-answer">We recommend staying Saturday to Thursday to enjoy all events.</div>
+    <div class="faq-answer">We recommend staying from Saturday 13th to Thursday 18th to enjoy all events.</div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">Can I arrange my room to be near other family?</button>
-    <div class="faq-answer">Yes — let us know when booking and we’ll do our best to accommodate requests.</div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">Can I bring a +1?</button>
+    <button class="faq-question">Can I bring a plus one?</button>
     <div class="faq-answer">We can only accommodate guests named on the invitation.</div>
   </div>
 
@@ -57,12 +65,12 @@
 
   <div class="faq-item">
     <button class="faq-question">Can I take photos?</button>
-    <div class="faq-answer">Of course — we just ask for no photos during the ceremony.</div>
+    <div class="faq-answer">Please take as many as you like; we only ask that our faces not be posted on social media. </div>
   </div>
 
   <div class="faq-item">
     <button class="faq-question">Will events be indoors or outdoors?</button>
-    <div class="faq-answer">Most events will be outdoors, with indoor options available if needed.</div>
+    <div class="faq-answer">For now, all events are being planned outdoors. This could change, subject to the weather. We suggest bringing a range of shoe options, flats, wedges, heels, etc. .</div>
   </div>
 
   <div class="faq-item">
@@ -72,7 +80,7 @@
 
   <div class="faq-item">
     <button class="faq-question">Does the resort provide wheelchairs or buggies?</button>
-    <div class="faq-answer">Yes — accessibility assistance can be arranged directly with the resort.</div>
+    <div class="faq-answer">Yes — accessibility assistance can be arranged directly with the resort. This might incur a charge. </div>
   </div>
 
 </section>
@@ -123,6 +131,14 @@ document.querySelectorAll(".faq-question").forEach(btn => {
   });
 });
 </script>
-
+<script>
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+  
+    toggle.addEventListener("click", function () {
+      links.classList.toggle("open");
+    });
+  </script>
+  
 </body>
 </html>
