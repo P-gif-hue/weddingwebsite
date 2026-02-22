@@ -879,20 +879,124 @@ nav {
       font-size: 32px;
     }
   }
+
 /* =====================================================
-9. RESPONSIVE (ALWAYS LAST)
+9. MOBILE RESPONSIVE
 ===================================================== */
+@media (max-width: 768px) {
 
-@media (max-width: 900px) {
-  .events-grid,
-  .travel-grid,
-  .things-grid {
-    grid-template-columns: 1fr;
+    /* ---------- GLOBAL SPACING ---------- */
+  
+    section,
+    .page-section,
+    .things-section,
+    .faq-section,
+    .guest-details {
+      margin: 50px auto;
+      padding: 0 18px;
+    }
+  
+    /* ---------- TYPOGRAPHY SCALING ---------- */
+  
+    h1 {
+      font-size: clamp(32px, 8vw, 44px);
+      line-height: 1.2;
+    }
+  
+    h2 {
+      font-size: clamp(24px, 6vw, 32px);
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 15.5px;
+    }
+  
+    /* ---------- NAV FIX ---------- */
+  
+    nav {
+      padding: 18px 10px;
+    }
+  
+    .nav-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+  
+    .nav-links li {
+      margin: 0;
+    }
+  
+    .nav-links a {
+      font-size: 14px;
+    }
+  
+    /* ---------- HERO SECTIONS ---------- */
+  
+    .travel-hero {
+      padding: 70px 16px 60px;
+    }
+  
+    .page-home .welcome-hero {
+      height: auto;
+      padding: 70px 20px;
+    }
+  
+    /* ---------- CARD PADDING REDUCTION ---------- */
+  
+    .message-card,
+    .travel-card,
+    .thing-card,
+    .rsvp-section {
+      padding: 24px;
+      border-radius: 18px;
+    }
+  
+    /* ---------- GRID STACKING ---------- */
+  
+    .events-grid,
+    .travel-grid,
+    .things-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  
+    /* ---------- TABLE STACKING ---------- */
+  
+    .dress-header {
+      display: none;
+    }
+  
+    .dress-row {
+      grid-template-columns: 1fr;
+      padding: 18px;
+      gap: 6px;
+    }
+  
+    .flight-row {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  
+    /* ---------- FORMS ---------- */
+  
+    .details-form input,
+    .details-form textarea,
+    .faq-form input,
+    .faq-form textarea {
+      font-size: 16px; /* prevents iOS zoom */
+    }
+  
+    /* ---------- BUTTONS ---------- */
+  
+    .btn-primary {
+      width: 100%;
+      padding: 16px;
+      font-size: 15px;
+    }
   }
-
-  .flight-row,
-  .dress-row {
-    grid-template-columns: 1fr;
-  }
-}
-
