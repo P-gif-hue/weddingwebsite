@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanka & Govind are getting married</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Shared Fonts (same as other pages) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-links">
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="DressCode.html">Dress Code</a></li>
+      <li><a href="Travel.html">Travel & Accommodation</a></li>
+      <li><a href="Thingstodo.html">Things to do</a></li>
+      <li><a href="FAQs.html">FAQs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="travel-hero">
+  <div class="travel-hero-content">
+    <h1>Travel & Accommodation</h1>
+
+    <div class="travel-buttons">
+      <a class="btn-primary"
+         href="https://globalsalesweddings.palaceresorts.com/link/guest?key=eyJpZCI6ImVhYjMzMGMxLTY3OTEtNGRkNS1iYjYwLWFkM2U1MGIwZTNkNSIsInRhZyI6IkxJTktJRCJ9">
+        Book Your Room
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- INFO CARDS -->
+<section class="page-section travel-grid">
+
+  <div class="travel-card">
+    <h3>Staying at Moon Palace</h3>
+    <ul>
+      <li>Food and drinks are included throughout your stay, with access to 17 restaurants and 13 bars.</li>
+      <li>All wedding events will include dining and a private bar.</li>
+      <li>No deposit required — pay closer to the trip.</li>
+      <li>Each room receives $250 resort credit.</li>
+      <li>The hotel is approximately 20 minutes from Cancun Airport.</li>
+    </ul>
+  </div>
+
+  <div class="travel-card">
+    <h3>Important Notes</h3>
+    <ul>
+      <li>Please remember to arrange your free airport transfers when booking.</li>
+      <li>Guests staying elsewhere will incur a $200 per person, per event fee.</li>
+      <li>Room location requests are welcomed, but cannot be guaranteed. Priority will be given to older guests and families.</li>
+    </ul>
+  </div>
+
+</section>
+
+
+<!-- FLIGHTS -->
+<section class="page-section flights-section">
+  <h2>Direct Flights to Cancun</h2>
+
+  <p class="flight-note">
+    Our first event will be on Sunday evening and the final event on Wednesday evening.
+    If possible, we recommend arriving on Saturday, though we completely understand if this isn’t feasible.
+  </p>
+
+  <div class="flights-table">
+    <div class="flight-row header">
+      <div>Departure</div>
+      <div>Airline</div>
+      <div>Days</div>
+    </div>
+
+    <div class="flight-row">
+      <div>London Heathrow</div>
+      <div>Virgin Atlantic</div>
+      <div>Wednesday / Friday / Sunday</div>
+    </div>
+
+    <div class="flight-row">
+      <div>London Gatwick</div>
+      <div>British Airways</div>
+      <div>Daily</div>
+    </div>
+
+    <div class="flight-row">
+      <div>Birmingham</div>
+      <div>TUI</div>
+      <div>Wed / Sun</div>
+    </div>
+
+    <div class="flight-row">
+      <div>Manchester</div>
+      <div>TUI</div>
+      <div>Mon / Thu / Sun</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GUEST DETAILS FORM -->
+<section class="guest-details">
+
+  <h2>Guest Travel Details</h2>
+
+  <p class="guest-intro">
+    To help us coordinate arrivals and ensure everyone is comfortable,
+    please share your travel details below.
+  </p>
+
+  <form class="details-form"
+        action="https://formspree.io/f/mzdajled"
+        method="POST">
+
+    <input type="hidden" name="form_source" value="travel_page">
+
+    <div class="form-block">
+      <p class="group-label">Airport Transfers Booked</p>
+
+      <div class="transfer-options">
+        <label class="checkbox-item">
+          <input type="checkbox" name="arrival_transfer" value="Yes">
+          <span>Arrival transfer booked</span>
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" name="departure_transfer" value="Yes">
+          <span>Departure transfer booked</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-block">
+      <label for="guest-name">Guest Name</label>
+      <input type="text" id="guest-name" name="guest_name" required>
+    </div>
+
+    <div class="form-block">
+      <label for="arrival-date">Arrival Date</label>
+      <input type="date" id="arrival-date" name="arrival_date">
+    </div>
+
+    <div class="form-block">
+      <label for="arrival-time">Arrival Time</label>
+      <input type="time" id="arrival-time" name="arrival_time">
+    </div>
+
+    <div class="form-block">
+      <label for="room-request">Room Location Requests</label>
+      <textarea id="room-request" name="room_request"
+        placeholder="Let us know if you'd like rooms near others."></textarea>
+    </div>
+
+    <div class="form-block">
+      <label for="allergies">Dietary Requirements / Allergies</label>
+      <textarea id="allergies" name="allergies"
+        placeholder="Please inform us and notify the resort directly."></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary">Submit Details</button>
+
+  </form>
+
+</section>
+
+</body>
+</html>

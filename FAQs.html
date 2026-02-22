@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs | Priyanka & Govind</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Shared Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-links">
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="DressCode.html">Dress Code</a></li>
+      <li><a href="Travel.html">Travel & Accommodation</a></li>
+      <li><a href="Thingstodo.html">Things to do</a></li>
+      <li><a href="FAQs.html">FAQs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="faq-item">
+    <button class="faq-question">How long should I book my stay for?</button>
+    <div class="faq-answer">We recommend staying Saturday to Thursday to enjoy all events.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I arrange my room to be near other family?</button>
+    <div class="faq-answer">Yes — let us know when booking and we’ll do our best to accommodate requests.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I bring a +1?</button>
+    <div class="faq-answer">We can only accommodate guests named on the invitation.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I book hair and makeup?</button>
+    <div class="faq-answer">Yes — services are available directly through the resort spa.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I take photos?</button>
+    <div class="faq-answer">Of course — we just ask for no photos during the ceremony.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Will events be indoors or outdoors?</button>
+    <div class="faq-answer">Most events will be outdoors, with indoor options available if needed.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What food will be served?</button>
+    <div class="faq-answer">A variety of options will be available, with dietary requirements catered for.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Does the resort provide wheelchairs or buggies?</button>
+    <div class="faq-answer">Yes — accessibility assistance can be arranged directly with the resort.</div>
+  </div>
+
+</section>
+
+
+<!-- CONTACT FORM -->
+<section class="faq-contact">
+
+  <h2>Still Have Questions?</h2>
+
+  <p class="faq-contact-intro">
+    If there’s anything we haven’t covered, please send us a message and we’ll be happy to help.
+  </p>
+
+  <form class="faq-form"
+        action="https://formspree.io/f/mzdajled"
+        method="POST">
+
+    <input type="hidden" name="form_source" value="faq_page">
+
+    <div class="form-block">
+      <label for="faq-name">Your Name</label>
+      <input type="text" id="faq-name" name="guest_name" required>
+    </div>
+
+    <div class="form-block">
+      <label for="faq-email">Your Email</label>
+      <input type="email" id="faq-email" name="guest_email" required>
+    </div>
+
+    <div class="form-block">
+      <label for="faq-question">Your Question</label>
+      <textarea id="faq-question" name="question" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary">Send Message</button>
+
+  </form>
+
+</section>
+
+
+<!-- Accordion Script -->
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>

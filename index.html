@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanka & Govind are getting married</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-home">
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="DressCode.html">Dress Code</a></li>
+        <li><a href="Travel.html">Travel & Accommodation</a></li>
+        <li><a href="Thingstodo.html">Things to do</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="welcome-hero">
+    <div class="welcome-overlay">
+      <h1>Welcome</h1>
+      <p class="hero-subtitle">February 2026 · Moon Palace Cancun</p>
+    </div>
+  </section>
+
+  <!-- Welcome Message -->
+  <section class="welcome-message">
+    <div class="message-card">
+      <h2>We’re So Excited to Celebrate Together</h2>
+
+      <p>
+        Thank you for making the journey to celebrate our wedding in Mexico.
+        We know travelling for a destination wedding takes time, effort and planning,
+        and it means so much to us that you’ll be there.
+      </p>
+
+      <p>
+        This website shares everything you need to help plan your stay —
+        from travel details to things to do while you’re there.
+        We can’t wait to celebrate together in such a special place.
+      </p>
+    </div>
+  </section>
+
+  <!-- RSVP Section -->
+  <section class="rsvp-section">
+    <h2>Kindly Respond</h2>
+
+    <p class="rsvp-text">
+      Please let us know whether you will be joining us in Cancun.
+    </p>
+
+    <form class="rsvp-form"
+          action="https://formspree.io/f/mzdajled"
+          method="POST">
+
+      <input type="hidden" name="form_source" value="rsvp_response">
+
+      <div class="form-block">
+        <label for="rsvp-name">Your Name</label>
+        <input type="text" id="rsvp-name" name="guest_name" required>
+      </div>
+
+      <div class="rsvp-options">
+        <label class="rsvp-choice">
+          <input type="radio" name="attendance" value="Yes" required>
+          Joyfully Accepts
+        </label>
+
+        <label class="rsvp-choice">
+          <input type="radio" name="attendance" value="No">
+          Regretfully Declines
+        </label>
+      </div>
+
+      <button type="submit" class="btn-primary">Submit RSVP</button>
+
+    </form>
+  </section>
+
+</body>
+</html>
