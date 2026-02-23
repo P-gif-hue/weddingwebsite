@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Shared Fonts (same as other pages) -->
+  <!-- Shared Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
 <!-- Navigation -->
 <nav>
   <div class="nav-inner">
-
     <button class="nav-toggle" aria-label="Open Menu">☰</button>
 
     <div class="nav-links">
@@ -31,7 +30,6 @@
         <li><a href="FAQs.html">FAQs</a></li>
       </ul>
     </div>
-
   </div>
 </nav>
 
@@ -53,24 +51,30 @@
 <!-- INFO CARDS -->
 <section class="page-section travel-grid">
 
-  <div class="travel-card">
-    <h3>Staying at Moon Palace</h3>
-    <ul>
-      <li>Food and drinks are included throughout your stay, with access to 17 restaurants and 13 bars.</li>
-      <li>All wedding events will include dining and a private bar.</li>
-      <li>No deposit required — pay closer to the trip.</li>
-      <li>Each room receives $250 resort credit.</li>
-      <li>The hotel is approximately 20 minutes from Cancun Airport.</li>
-    </ul>
+  <!-- BOX 1 -->
+  <div class="travel-box">
+    <div class="travel-card">
+      <h3>Staying at Moon Palace</h3>
+      <ul>
+        <li>Food and drinks are included throughout your stay, with access to 17 restaurants and 13 bars.</li>
+        <li>All wedding events will include dining and a private bar.</li>
+        <li>No deposit required — pay closer to the trip.</li>
+        <li>Each room receives $250 resort credit.</li>
+        <li>The hotel is approximately 20 minutes from Cancun Airport.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="travel-card">
-    <h3>Important Notes</h3>
-    <ul>
-      <li>Please remember to arrange your free airport transfers when booking.</li>
-      <li>Guests staying elsewhere will incur a $200 per person, per event fee.</li>
-      <li>Room location requests are welcomed, but cannot be guaranteed. Priority will be given to older guests and families.</li>
-    </ul>
+  <!-- BOX 2 -->
+  <div class="travel-box">
+    <div class="travel-card">
+      <h3>Important Notes</h3>
+      <ul>
+        <li>Please remember to arrange your free airport transfers when booking.</li>
+        <li>Guests staying elsewhere will incur a $200 per person, per event fee.</li>
+        <li>Room location requests are welcomed, but cannot be guaranteed. Priority will be given to older guests and families.</li>
+      </ul>
+    </div>
   </div>
 
 </section>
@@ -86,11 +90,6 @@
   </p>
 
   <div class="flights-table">
-    <div class="flight-row header">
-      <div>Departure</div>
-      <div>Airline</div>
-      <div>Days</div>
-    </div>
 
     <div class="flight-row">
       <div>London Heathrow</div>
@@ -136,7 +135,7 @@
     <input type="hidden" name="form_source" value="travel_page">
 
     <div class="form-block">
-      <p class="group-label">Airport Transfers Booked</p>
+      <p class="group-label">Have you booked your airport transfers?</p>
 
       <div class="transfer-options">
         <label class="checkbox-item">
@@ -183,18 +182,19 @@
   </form>
 
 </section>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".nav-toggle");
-    const links = document.querySelector(".nav-links");
-  
-    if (toggle && links) {
-      toggle.addEventListener("click", function () {
-        links.classList.toggle("open");
-      });
-    }
-  });
-  </script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      links.classList.toggle("open");
+    });
+  }
+});
+</script>
 
 </body>
 </html>

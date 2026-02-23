@@ -3,23 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Priyanka & Govind are getting married</title>
+  <title>Things To Do | Priyanka & Govind</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Same fonts across the site -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Parisienne&family=Poppins:ital,wght@0,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- Navigation -->
-
 <nav>
   <div class="nav-inner">
-
     <button class="nav-toggle" aria-label="Open Menu">☰</button>
 
     <div class="nav-links">
@@ -32,96 +30,98 @@
         <li><a href="FAQs.html">FAQs</a></li>
       </ul>
     </div>
-
   </div>
 </nav>
-  
 
-  <!-- Resort Activities -->
-  <section class="things-section">
-    <h2>At the Resort</h2>
+<!-- Resort Activities -->
+<section class="things-section">
+  <h2>At the Resort</h2>
 
-    <div class="things-grid">
-      <div class="thing-card">
-        <h3>Golf</h3>
-        <p>Play on the Jack Nicklaus Signature course.</p>
-      </div>
+  <div class="things-grid">
 
-      <div class="thing-card">
-        <h3>Games Room</h3>
-        <p>Pool, arcade games and relaxed fun.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Paddleboarding</h3>
-        <p>Glide across calm turquoise waters.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Kayaking</h3>
-        <p>Explore the coastline at your own pace.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Tennis & Pickleball</h3>
-        <p>Enjoy friendly matches in the sunshine.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Complimentary Bikes</h3>
-        <p>Cycle through scenic resort pathways.</p>
-      </div>
+    <div class="thing-card">
+      <img src="Images/golf.png" alt="Golf"> <!-- PUT IMAGE PATH HERE -->
+      <h3>Golf</h3>
+      <p>Play on the Jack Nicklaus Signature course.</p>
     </div>
-  </section>
 
-
-  <!-- Local Excursions -->
-  <section class="things-section">
-    <h2>Explore Cancun</h2>
-
-    <div class="things-grid">
-      <div class="thing-card">
-        <h3>Chichén Itzá</h3>
-        <p>An unforgettable UNESCO World Heritage site.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Xcaret</h3>
-        <p>Nature park, rivers, wildlife and culture.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Tulum</h3>
-        <p>Clifftop ruins overlooking the Caribbean.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Isla Mujeres</h3>
-        <p>A stunning island perfect for a day trip.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Shopping</h3>
-        <p>Local markets and waterfront malls.</p>
-      </div>
-
-      <div class="thing-card">
-        <h3>Coco Bongo</h3>
-        <p>A lively evening of music and entertainment.</p>
-      </div>
+    <div class="thing-card">
+      <img src="Images/gamesroom.png" alt="Games Room">
+      <h3>Games Room</h3>
+      <p>Pool, arcade games and relaxed fun.</p>
     </div>
-  </section>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".nav-toggle");
-      const links = document.querySelector(".nav-links");
-    
-      if (toggle && links) {
-        toggle.addEventListener("click", function () {
-          links.classList.toggle("open");
-        });
-      }
-    });
-    </script>
+
+    <div class="thing-card">
+      <img src="Images/paddleboarding.jpg" alt="Paddleboarding">
+      <h3>Paddleboarding</h3>
+      <p>Glide across calm turquoise waters.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/kayacking.jpg" alt="Kayaking">
+      <h3>Kayaking</h3>
+      <p>Explore the coastline at your own pace.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/tennis.jpg" alt="Tennis">
+      <h3>Tennis & Pickleball</h3>
+      <p>Enjoy friendly matches in the sunshine.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/bikes.jpg" alt="Bikes">
+      <h3>Complimentary Bikes</h3>
+      <p>Cycle through scenic resort pathways.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Local Excursions -->
+<section class="things-section">
+  <h2>Explore Cancun</h2>
+
+  <div class="things-grid">
+
+    <div class="thing-card">
+      <img src="Images/chichenitza.jpg" alt="Chichen Itza">
+      <h3>Chichén Itzá</h3>
+      <p>An unforgettable UNESCO World Heritage site.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/xcaraet.jpg" alt="Xcaret">
+      <h3>Xcaret</h3>
+      <p>Nature park, rivers, wildlife and culture.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/tulum.jpg" alt="Tulum">
+      <h3>Tulum</h3>
+      <p>Clifftop ruins overlooking the Caribbean.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/isla.jpg" alt="Isla Mujeres">
+      <h3>Isla Mujeres</h3>
+      <p>A stunning island perfect for a day trip.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/shopping.jpg" alt="Shopping">
+      <h3>Shopping</h3>
+      <p>Local markets and waterfront malls.</p>
+    </div>
+
+    <div class="thing-card">
+      <img src="Images/coco.jpg" alt="Coco Bongo">
+      <h3>Coco Bongo</h3>
+      <p>A lively evening of music and entertainment.</p>
+    </div>
+
+  </div>
+</section>
+
 </body>
 </html>
