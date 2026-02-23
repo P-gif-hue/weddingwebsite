@@ -14,33 +14,25 @@
 </head>
 
 <body>
-<!-- Navigation -->
 
-<nav>
+  <nav>
     <div class="nav-inner">
   
-  ```
-  <!-- Hamburger (shows on mobile) -->
-  <button class="nav-toggle" aria-label="Open Menu">
-    ☰
-  </button>
+      <button class="nav-toggle" aria-label="Open Menu">☰</button>
   
-  <!-- Links -->
-  <div class="nav-links">
-    <ul>
-      <li><a href="index.html">Welcome</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="DressCode.html">Dress Code</a></li>
-      <li><a href="Travel.html">Travel & Accommodation</a></li>
-      <li><a href="Thingstodo.html">Things to do</a></li>
-      <li><a href="FAQs.html">FAQs</a></li>
-    </ul>
-  </div>
-  ```
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">Welcome</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="DressCode.html">Dress Code</a></li>
+          <li><a href="Travel.html">Travel & Accommodation</a></li>
+          <li><a href="Thingstodo.html">Things to do</a></li>
+          <li><a href="FAQs.html">FAQs</a></li>
+        </ul>
+      </div>
   
     </div>
   </nav>
-  
 
   <section class="page-section page-section--wide">
 
@@ -113,13 +105,17 @@
 
   </section>
   <script>
-    const toggle = document.querySelector(".nav-toggle");
-    const links = document.querySelector(".nav-links");
-  
-    toggle.addEventListener("click", function () {
-      links.classList.toggle("open");
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".nav-toggle");
+      const links = document.querySelector(".nav-links");
+    
+      if (toggle && links) {
+        toggle.addEventListener("click", function () {
+          links.classList.toggle("open");
+        });
+      }
     });
-  </script>
+    </script>
   
 </body>
 </html>

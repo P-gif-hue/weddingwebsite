@@ -19,9 +19,7 @@
 <nav>
   <div class="nav-inner">
 
-    <button class="nav-toggle" aria-label="Open Menu">
-      ☰
-    </button>
+    <button class="nav-toggle" aria-label="Open Menu">☰</button>
 
     <div class="nav-links">
       <ul>
@@ -36,10 +34,6 @@
 
   </div>
 </nav>
-  ```
-  
-    </div>
-  </nav>
   
 
 <!-- FAQ SECTION -->
@@ -132,13 +126,17 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 </script>
 
 <script>
-  const toggle = document.querySelector(".nav-toggle");
-  const links = document.querySelector(".nav-links");
-
-  toggle.addEventListener("click", function () {
-    links.classList.toggle("open");
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+  
+    if (toggle && links) {
+      toggle.addEventListener("click", function () {
+        links.classList.toggle("open");
+      });
+    }
   });
-</script>
+  </script>
   
 </body>
 </html>

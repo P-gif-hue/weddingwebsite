@@ -17,18 +17,25 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #3a342f;
-  background: #f7f3ef;
+
+  /* Your sunset background — merged properly */
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.35), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(255,255,255,0.25), transparent 40%),
+    linear-gradient(180deg, #f6b1a0 0%, #ee9077 100%);
 }
 
 h1, h2, h3 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
+  color: #4a2a2a;
 }
 
 p {
   line-height: 1.6;
   color: #6f6761;
 }
+
 
 /* =====================================================
 NAVIGATION (DESKTOP + MOBILE BASE)
@@ -39,6 +46,7 @@ nav {
   text-align: center;
   position: relative;
   z-index: 1000;
+  position: relative;
 }
 
 /* Inner wrapper (keeps button + links aligned) */
@@ -99,146 +107,211 @@ nav {
 }
 
 /* =====================================================
-3. HOME PAGE
+3. HOME PAGE — PINK + SUNSET STYLE
 ===================================================== */
 
+/* HERO */
 .page-home .welcome-hero {
-    height: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background:
-        linear-gradient(rgba(247,243,239,0.75), rgba(247,243,239,0.95)),
-        url("Pictures/photos/cancun.jpg") center/cover no-repeat;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.55), rgba(255,245,240,0.75)),
+    url("Pictures/photos/cancun.jpg") center/cover no-repeat;
 }
 
+
+/* Soft transition into coral section */
+.page-home .welcome-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  background: linear-gradient(to bottom,
+      rgba(255,255,255,0) 0%,
+      #f2a18e 100%);
+}
+
+/* MAIN TITLE */
 .page-home .welcome-overlay h1 {
-    font-size: 64px;
-    margin-bottom: 12px;
-    color: #2f2a26;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(42px, 6vw, 64px);
+  letter-spacing: 0.5px;
+
+  color: #5c3a36;   /* warm romantic brown */
+  margin-bottom: 10px;
 }
 
+
+/* SUBTITLE */
 .page-home .hero-subtitle {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #8a817a;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+
+  color: #a27c72;
 }
 
+.message-card h2::after,
+.rsvp-section h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  margin: 14px auto 0;
+
+  background: linear-gradient(to right, #f4b2a1, #e18c74);
+  border-radius: 2px;
+}
+  .couple-names span {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 12px;
+    color: #d48a78;
+  }
+
+.couple-names span {
+  font-family: "Parisienne", cursive;
+  font-size: 0.9em;
+  margin: 0 8px;
+  color: #c97c6b;
+}
 
 /* MESSAGE SECTION */
-
 .page-home .welcome-message {
-    margin: 50px auto 30px;
-    padding: 0 20px;
+  margin: 60px auto 30px;
+  padding: 0 20px;
 }
 
+.wedding-line {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  color: #9c8f88;
+
+  margin-top: 18px;
+}
+
+.welcome-message {
+  margin: 90px auto 40px;
+}
+
+
+/* MESSAGE CARD */
 .page-home .message-card {
-    max-width: 720px;
-    margin: auto;
-    padding: 45px;
-    border-radius: 26px;
-    background: rgba(255,255,255,0.78);
-    border: 1px solid rgba(200,190,180,0.25);
-    text-align: center;
-    box-shadow: 0 18px 40px rgba(60,40,20,0.05);
+  max-width: 720px;
+  margin: auto;
+  padding: 45px;
+  border-radius: 26px;
+  background: #fffaf7;
+  box-shadow: 0 30px 70px rgba(180,90,70,0.12);
+  text-align: center;
+  background: rgba(255,255,255,0.92);
+  border: none;
+
+box-shadow:
+  0 30px 60px rgba(190,100,80,0.18),
+  0 4px 12px rgba(0,0,0,0.04);
+
 }
 
 .page-home .message-card h2 {
-    font-size: 34px;
-    margin-bottom: 18px;
+  font-size: 32px;
+  margin-bottom: 18px;
+  color: #5c3a36;
 }
 
 .page-home .message-card p {
-    color: #6f6761;
-    line-height: 1.7;
-    margin-bottom: 14px;
+  color: #6f6761;
+  line-height: 1.7;
+  margin-bottom: 14px;
 }
 
-
 /* RSVP SECTION */
-
 .page-home .rsvp-section {
-    max-width: 520px;
-    margin: 20px auto 90px;
-    padding: 40px;
-    border-radius: 26px;
-    background: rgba(255,255,255,0.78);
-    border: 1px solid rgba(200,190,180,0.25);
-    text-align: center;
-    box-shadow: 0 18px 40px rgba(60,40,20,0.05);
+  max-width: 520px;
+  margin: 30px auto 90px;
+  padding: 40px;
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(120,70,60,0.08);
+  background: rgba(255,255,255,0.92);
+  border: none;
+
+box-shadow:
+  0 30px 60px rgba(190,100,80,0.18),
+  0 4px 12px rgba(0,0,0,0.04);
 }
 
 .page-home .rsvp-section h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #5c3a36;
 }
 
 .page-home .rsvp-text {
-    color: #7a716a;
-    margin-bottom: 25px;
+  color: #7a716a;
+  margin-bottom: 25px;
 }
 
 
 /* FORM */
-
-.page-home .rsvp-form {
-    text-align: left;
-}
-
 .page-home .rsvp-form input[type="text"] {
-    width: 100%;
-    padding: 14px;
-    border-radius: 14px;
-    border: 1px solid #ddd4cd;
-    margin-bottom: 20px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+
+  border: 1px solid #e6d6d0;
+  background: #ffffff;
+
+  margin-bottom: 20px;
 }
 
 
 /* YES / NO OPTIONS */
-
 .page-home .rsvp-options {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
 }
 
 .page-home .rsvp-choice {
-    font-size: 16px;
-    color: #6f6761;
+  font-size: 16px;
+  color: #6f6761;
 }
 
 
 /* BUTTON */
-
-.page-home .btn-primary {
-    display: inline-block;
-    padding: 14px 34px;
-    border-radius: 40px;
-    background: #b7a39a;
+  .page-home .btn-primary {
+    background: #e08f79;
     color: white;
-    border: none;
-    letter-spacing: 1.2px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    
-}
-
-.page-home .btn-primary:hover {
-    background: #a89289;
+    border-radius: 999px;
+  
+    padding: 16px 42px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+  
+    box-shadow: 0 12px 28px rgba(220,120,100,0.35);
+    transition: all 0.3s ease;
+  }
+  
+  .page-home .btn-primary:hover {
     transform: translateY(-2px);
-
-}
-
-/* Center the RSVP button without affecting inputs */
-.page-home .rsvp-form {
-    text-align: center;
-}
-
-.page-home .rsvp-form .form-block {
-    text-align: left;
-}
+    background: #d67f68;
+  }
 
 /* =====================================================
 4. ABOUT PAGE (EVENT GRID)
@@ -923,16 +996,13 @@ nav {
     resize: vertical;
   }
   
-  
-
-/* =====================================================
-9. MOBILE RESPONSIVE — MASTER (ONLY ONE)
+  /* =====================================================
+9. MOBILE RESPONSIVE
 ===================================================== */
 
 @media (max-width: 768px) {
 
-  /* ---------- GLOBAL SPACING ---------- */
-
+  /* GLOBAL SPACING */
   section,
   .page-section,
   .things-section,
@@ -942,34 +1012,15 @@ nav {
     padding: 0 18px;
   }
 
-  /* ---------- TYPOGRAPHY ---------- */
+  /* TYPOGRAPHY */
+  h1 { font-size: clamp(32px, 8vw, 44px); }
+  h2 { font-size: clamp(24px, 6vw, 32px); }
+  p  { font-size: 15.5px; }
 
-  h1 {
-    font-size: clamp(32px, 8vw, 44px);
-    line-height: 1.2;
-  }
+  /* =========================
+     MOBILE NAV (FIXED)
+  ========================= */
 
-  h2 {
-    font-size: clamp(24px, 6vw, 32px);
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 15.5px;
-  }
-
-  /* ---------- NAV → MOBILE DROPDOWN ---------- */
-
-  /* =====================================================
-MOBILE NAV
-===================================================== */
-
-@media (max-width: 768px) {
-
-  /* Show hamburger */
   .nav-toggle {
     display: block;
     font-size: 26px;
@@ -979,124 +1030,53 @@ MOBILE NAV
     cursor: pointer;
   }
 
-  /* Stack menu */
   .nav-links {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: #f7f3ef;
+
+    background: #fffaf7;
 
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
   }
 
+  .nav-links.open {
+    max-height: 420px;
+  }
+
   .nav-links ul {
     flex-direction: column;
-    gap: 10px;
-    padding: 16px 0;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
   }
 
   .nav-links a {
-    display: block;
-    padding: 12px;
     font-size: 16px;
+    padding: 10px;
   }
 
-  /* When opened via JS */
-  .nav-links.open {
-    max-height: 400px;
-  }
-}
-  /* ---------- STACK ALL GRIDS ---------- */
-
+  /* STACK GRIDS */
   .events-grid,
   .travel-grid,
   .things-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
   }
 
-  /* ---------- EVENTS GUIDANCE BOX ---------- */
-
-  .events-guidance {
-    padding: 20px;
-    margin-bottom: 40px;
-  }
-
-  /* ---------- FLIGHTS → MOBILE CARDS ---------- */
-
-  .flight-row {
-    grid-template-columns: 1fr;
-    padding: 16px 18px;
-    gap: 4px;
-    border-bottom: none;
-    margin-bottom: 14px;
-    border-radius: 14px;
-    background: #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  }
-
-  .flight-row.header {
-    display: none;
-  }
-
-  .flight-row div:nth-child(1)::before {
-    content: "Departure";
-    font-size: 12px;
-    color: #9a9088;
-    text-transform: uppercase;
-    display: block;
-  }
-
-  .flight-row div:nth-child(2)::before {
-    content: "Airline";
-    font-size: 12px;
-    color: #9a9088;
-    text-transform: uppercase;
-    display: block;
-  }
-
-  .flight-row div:nth-child(3)::before {
-    content: "Days";
-    font-size: 12px;
-    color: #9a9088;
-    text-transform: uppercase;
-    display: block;
-  }
-
-  /* ---------- DRESS TABLE STACK ---------- */
-
-  .dress-header {
-    display: none;
-  }
+  /* DRESS TABLE → STACK */
+  .dress-header { display: none; }
 
   .dress-row {
     grid-template-columns: 1fr;
     padding: 18px;
-    gap: 6px;
   }
 
-  /* ---------- FORMS ---------- */
-
-  .details-form input,
-  .details-form textarea,
-  .faq-form input,
-  .faq-form textarea {
-    font-size: 16px;
-  }
-
-  /* ---------- BUTTON ---------- */
-
+  /* FORMS */
   .btn-primary {
     width: 100%;
-    padding: 16px;
   }
 }
 
-
-/* Hide hamburger on desktop */
-.nav-toggle {
-  display: none;
-}

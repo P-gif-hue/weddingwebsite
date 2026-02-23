@@ -11,17 +11,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body class="page-home">
-<!-- Navigation -->
 
+<!-- Navigation -->
 <nav>
   <div class="nav-inner">
 
-    <button class="nav-toggle" aria-label="Open Menu">
-      ☰
-    </button>
+    <button class="nav-toggle" aria-label="Open Menu">☰</button>
 
     <div class="nav-links">
       <ul>
@@ -36,77 +35,84 @@
 
   </div>
 </nav>
-  
-  <!-- Hero -->
-  <section class="welcome-hero">
-    <div class="welcome-overlay">
-      <h1>Welcome</h1>
-      <p class="hero-subtitle">February 2026 · Moon Palace Cancun</p>
-    </div>
-  </section>
 
-  <!-- Welcome Message -->
-  <section class="welcome-message">
-    <div class="message-card">
-      <h2>We’re So Excited to Celebrate Together</h2>
+<!-- Hero -->
+<section class="welcome-hero">
+  <div class="welcome-overlay">
+    <h1 class="couple-names">
+      Priyanka <span>&</span> Govind
+    </h1>
 
-      <p>
-        Thank you for making the journey to celebrate our wedding in Mexico.
-        We know travelling for a destination wedding takes time, effort and planning,
-        and it means so much to us that you’ll be there.
-      </p>
+    <p class="wedding-line">Moon Palace, Cancun 2027</p>
+  </div>
+</section>
 
-      <p>
-        This website shares everything you need to help plan your stay —
-        from travel details to things to do while you’re there.
-        We can’t wait to celebrate together in such a special place.
-      </p>
-    </div>
-  </section>
+<!-- Welcome Message -->
+<section class="welcome-message">
+  <div class="message-card">
+    <h2>We’re So Excited to Celebrate Together</h2>
 
-  <!-- RSVP Section -->
-  <section class="rsvp-section">
-    <h2>Kindly Respond</h2>
-
-    <p class="rsvp-text">
-      Please let us know whether you will be joining us in Cancun.
+    <p>
+      Thank you for making the journey to celebrate our wedding in Mexico.
+      We know travelling for a destination wedding takes time, effort and planning,
+      and it means so much to us that you’ll be there.
     </p>
 
-    <form class="rsvp-form"
-          action="https://formspree.io/f/mzdajled"
-          method="POST">
+    <p>
+      This website shares everything you need to help plan your stay —
+      from travel details to things to do while you’re there.
+      We can’t wait to celebrate together in such a special place.
+    </p>
+  </div>
+</section>
 
-      <input type="hidden" name="form_source" value="rsvp_response">
+<!-- RSVP Section -->
+<section class="rsvp-section">
+  <h2>Kindly Respond</h2>
 
-      <div class="form-block">
-        <label for="rsvp-name">Your Name</label>
-        <input type="text" id="rsvp-name" name="guest_name" required>
-      </div>
+  <p class="rsvp-text">
+    Please let us know whether you will be joining us in Cancun.
+  </p>
 
-      <div class="rsvp-options">
-        <label class="rsvp-choice">
-          <input type="radio" name="attendance" value="Yes" required>
-          Joyfully Accepts
-        </label>
+  <form class="rsvp-form"
+        action="https://formspree.io/f/mzdajled"
+        method="POST">
 
-        <label class="rsvp-choice">
-          <input type="radio" name="attendance" value="No">
-          Regretfully Declines
-        </label>
-      </div>
+    <input type="hidden" name="form_source" value="rsvp_response">
 
-      <button type="submit" class="btn-primary">Submit RSVP</button>
+    <div class="form-block">
+      <label for="rsvp-name">Your Name</label>
+      <input type="text" id="rsvp-name" name="guest_name" required>
+    </div>
 
-    </form>
-  </section>
-  <script>
+    <div class="rsvp-options">
+      <label class="rsvp-choice">
+        <input type="radio" name="attendance" value="Yes" required>
+        Joyfully Accepts
+      </label>
+
+      <label class="rsvp-choice">
+        <input type="radio" name="attendance" value="No">
+        Regretfully Declines
+      </label>
+    </div>
+
+    <button type="submit" class="btn-primary">Submit RSVP</button>
+  </form>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".nav-toggle");
     const links = document.querySelector(".nav-links");
   
-    toggle.addEventListener("click", function () {
-      links.classList.toggle("open");
-    });
+    if (toggle && links) {
+      toggle.addEventListener("click", function () {
+        links.classList.toggle("open");
+      });
+    }
+  });
   </script>
-  
+
+
 </body>
 </html>
